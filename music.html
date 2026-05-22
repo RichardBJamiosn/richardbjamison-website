@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png" />
+    <link rel="manifest" href="manifest.webmanifest">
+    <title>Richard B Jamison | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Rubik:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/music.css" />
+</head>
+
+<body>
+
+    <div id="preloader" class="animation">
+        <div class="decor">
+            <div class="bar"></div>
+            <div class="bar2"></div>
+        </div>
+        <p>Loading...</p>
+    </div>
+    <div class="pre-overlay o-1"></div>
+    <div class="pre-overlay o-2"></div>
+
+    <!-- Header Start-->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo"><img src="img/logo.png" alt="Logo" class="logo-img" /></a>
+                <address>
+                    <a class="all-link header-link" href="mailto:me@RichardBJamison.com"> <span>
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </span> Me@RichardBJamison.com</a>
+                </address>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container table">
+                <div class="hero-content table-cell">
+                    <h1 class="primary-title mb-md">
+                        Richard B Jamison
+                    </h1>
+                    <div class="hero-buttons">
+                        <a class="all-link music-link" href="#music">My music</a>
+                        <a class="all-link play-btn" href="#about">
+                            <ion-icon class="play-icon" name="play-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container gird-1-2-col">
+
+                <div class="about-items">
+                    <h2 class="secondary-title mb-sm">About me</h2>
+                    <div class="about-des">
+                        <p>
+                            The video displayed is a promo for a  band I toured with from 2000 to 2002. The video quality is a reflection of that time period.
+                        </p>
+                        <p>
+                            I began playing drums at age 11, by age 17 I was working in blues and wedding bands in NY.
+                            In 2000 I attended State University of New York and obtained an Associates Music Degree. Since then I have
+                            toured with rock, reggae and jazz projects. I have also played in Fusion Jazz, Punk & Hardcore bands. While living in San Diego, Ca, I
+                             taught drumset at "A Reason To Survive" a non-profit for terminally ill children.
+                          
+                        </p>
+                        <p>
+                            Unfortunitaly, exhaustion and a career fork in the road caused a 10yr hiatus from playing. I have now spent
+                            the last year regaining my chops, meter & skill set. I am in the process of recording a
+                            video drumset method series from my studio that will be available later this year.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="video-item" style="display:flex;align-items:center;justify-content:center;min-height:200px;background:#111;border-radius:8px;">
+                    <p style="color:#aaa;text-align:center;padding:2rem;">Video coming soon</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="music-section" id="music">
+            <div class="container text-center">
+                <h2 class="secondary-title mb-lg">Tracks Recorded On</h2>
+            </div>
+
+            <div class="container">
+                <div class="play-list" id="player">
+                    <div class="audio-player mb-md">
+                        <audio controls="controls">
+                            Your browser dose not Support the audio Tag
+                        </audio>
+                    </div>
+                    <div class="music-items">
+                        <div class="music-list" onclick="pickSong(0)"><span> 01 </span> Discrepencies.mp3</div>
+                        <div class="music-list" onclick="pickSong(1)"><span> 02 </span> Follow Me.mp3</div>
+                        <div class="music-list" onclick="pickSong(2)"><span> 03 </span> Foot Prints.mp3</div>
+                        <div class="music-list" onclick="pickSong(3)"><span> 04 </span> I Remember.mp3</div>
+                        <div class="music-list" onclick="pickSong(4)"><span> 05 </span> In My Soul.mp3</div>
+                        <div class="music-list" onclick="pickSong(5)"><span> 06 </span> Reconcile.mp3</div>
+                        <div class="music-list" onclick="pickSong(6)"><span> 07 </span> Rich Fool.mp3</div>
+                        <div class="music-list" onclick="pickSong(7)"><span> 08 </span> Thoughts Of You.mp3</div>
+                        <div class="music-list" onclick="pickSong(8)"><span> 09 </span> Walk With Me.mp3</div>
+                        <div class="music-list" onclick="pickSong(9)"><span> 10 </span> Where Were You.mp3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comming-section">
+            <div class="container text-center">
+                <h2 class="secondary-title mb-lg">Drum method video's coming soon!</h2>
+            </div>
+
+            <div class="container">
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                <strong>Richard B Jamison</strong>
+                Copyright &copy; 2022 - All right reserved
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="js/music.js"></script>
+</body>
+
+</html>

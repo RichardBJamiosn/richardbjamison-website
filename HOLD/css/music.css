@@ -1,0 +1,753 @@
+
+/* ==========================
+Genarel Css
+============================= */
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #333;
+}
+
+.all-link:link,
+.all-link:visited {
+    letter-spacing: .05rem;
+    text-decoration: none;
+}
+
+.all-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+}
+
+.gird {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 3rem 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.gird-1-2-col {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 3rem 1.5fr;
+    grid-template-columns: 1fr 1.5fr;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.table {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-sm {
+    margin-bottom: 1.5rem;
+}
+
+.mb-md {
+    margin-bottom: 2rem;
+}
+
+.mb-lg {
+    margin-bottom: 3rem;
+}
+
+/* ==========================
+Genarel Css End
+============================= */
+
+/* ==========================
+Preloader
+============================= */
+.pre-overlay {
+    position: fixed;
+    width: 100%;
+    height: 50%;
+    background-color: #222;
+    z-index: 50;
+    -webkit-transition: all 1.8s ease;
+    -o-transition: all 1.8s ease;
+    transition: all 1.8s ease;
+}
+
+.pre-overlay.o-1 {
+    left: 0;
+    top: 0;
+}
+
+.pre-overlay.o-2 {
+    right: 0;
+    bottom: 0;
+}
+
+#preloader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+#preloader p {
+    font-size: 20px;
+    color: #d1a17b;
+    margin: 25px auto auto auto;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#preloader.animation p {
+    -webkit-animation-name: blink;
+    animation-name: blink;
+    -webkit-animation-duration: 0.85s;
+    animation-duration: 0.85s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+.decor {
+    width: 2rem;
+    height: 5rem;
+    margin: auto auto 0 auto;
+    position: relative;
+}
+
+.decor .bar {
+    height: 100px;
+    background-color: #d1a17b;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.decor .bar {
+    -webkit-animation-name: music-sec;
+    animation-name: music-sec;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    max-height: 90px;
+}
+
+.decor::before {
+    display: block;
+    content: "";
+    width: 2rem;
+    height: 5rem;
+    position: absolute;
+    left: -45px;
+    bottom: 0px;
+    background-color: #d1a17b;
+}
+
+.decor::before {
+    -webkit-animation-name: music-first;
+    animation-name: music-first;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+.decor::after {
+    display: block;
+    content: "";
+    width: 2rem;
+    height: 5rem;
+    background-color: #d1a17b;
+    left: 45px;
+    bottom: 0;
+    position: absolute;
+}
+
+.decor::after {
+    -webkit-animation-name: music-third;
+    animation-name: music-third;
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+#preloader.over {
+    display: none;
+}
+
+
+@-webkit-keyframes music-first {
+    0% {
+        height: 20px;
+    }
+
+    100% {
+        height: 70px;
+    }
+}
+
+
+@keyframes music-first {
+    0% {
+        height: 20px;
+    }
+
+    100% {
+        height: 70px;
+    }
+}
+
+@-webkit-keyframes music-sec {
+    0% {
+        height: 20px;
+    }
+
+    100% {
+        height: 90px;
+    }
+}
+
+@keyframes music-sec {
+    0% {
+        height: 20px;
+    }
+
+    100% {
+        height: 90px;
+    }
+}
+
+@-webkit-keyframes music-third {
+    0% {
+        height: 20px;
+    }
+
+    100% {
+        height: 100px;
+    }
+}
+
+@keyframes music-third {
+    0% {
+        height: 20px;
+    }
+
+    100% {
+        height: 100px;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+/* ==========================
+Preloader End
+============================= */
+
+/* ==========================
+Header Start
+============================= */
+.header {
+    position: absolute;
+    width: 100%;
+    padding: .5rem 0;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    -webkit-transition: all .5s linear;
+    -o-transition: all .5s linear;
+    transition: all .5s linear;
+}
+
+.sticky .header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(209, 162, 123, 0.5);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.1);
+}
+.header-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.logo {
+    max-width: 4rem;
+}
+
+.logo-img {
+    width: 100%;
+}
+
+.header-link:link,
+.header-link:visited {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+    line-height: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: .5rem;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.header-link:hover,
+.header-link:active {
+    color: #d1a17b;
+}
+
+/* ==========================
+Header End
+============================= */
+
+/* ==========================
+Hero Section
+============================= */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background-image: -o-linear-gradient(right top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../img/banner1.jpg);
+    background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url(../img/banner1.jpg);
+    background-image: linear-gradient(to left bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../img/banner1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-content {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+}
+
+.primary-title {
+    font-family: 'Pattaya', sans-serif;
+    font-size: 5rem;
+    line-height: 1.3;
+    color: #fff;
+    letter-spacing: .3rem;
+    color: #d1a17b;
+}
+
+.hero-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.music-link:link,
+.music-link:visited {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #fff;
+    border: .1rem solid #d1a17b;
+    padding: .7rem 3rem;
+    border-radius: 10px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.music-link:hover,
+.music-link:active {
+    background-color: #d1a17b;
+}
+
+.play-btn {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(209, 162, 123, 0.8);
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.play-btn::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: #d1a27bc6;
+    border: .2rem solid #d1a17b;
+    border-radius: 50%;
+    -webkit-animation: PlayBtnAnimation 2000ms linear infinite;
+    animation: PlayBtnAnimation 2000ms linear infinite;
+}
+
+.play-icon {
+    font-size: 3rem;
+    color: #fff;
+}
+
+@-webkit-keyframes PlayBtnAnimation {
+    0% {
+        opacity: .1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: .7;
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1.6);
+        transform: scale(1.6);
+    }
+}
+
+@keyframes PlayBtnAnimation {
+    0% {
+        opacity: .1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: .7;
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1.6);
+        transform: scale(1.6);
+    }
+}
+
+/* ==========================
+Hero Section End
+============================= */
+
+/* ==========================
+Music Section Start
+============================= */
+.about-section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 8rem 0;
+    z-index: 1;
+}
+
+.secondary-title {
+    font-size: 4.5rem;
+    font-weight: 500;
+    line-height: 1;
+    color: #d1a17b;
+}
+
+.about-des {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+}
+.about-des p{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    font-weight: 300;
+    letter-spacing: .02rem;
+    color: #555;
+}
+
+.video-item {
+    padding: 1rem;
+    background-color: rgba(209, 162, 123, 0.2);
+    border-radius: 1rem;
+}
+
+video {
+    width: 100%;
+    border-radius: 1rem;
+    margin: 0;
+}
+
+/* ==========================
+Music Section
+============================= */
+.music-section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 8rem 0;
+    z-index: 1;
+}
+
+.music-section::before {
+    content: "";
+    position: absolute;
+    background-image: url(../img/music-banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .1;
+}
+
+
+audio {
+    width: 100%;
+}
+
+.audio-player {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 1rem !important;
+    background-color: rgba(209, 162, 123, 0.2) !important;
+}
+
+.music-items {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1rem 1fr;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 1rem;
+    -moz-column-gap: 1rem;
+    column-gap: 3rem;
+    row-gap: 2rem;
+}
+
+.music-list {
+    font-size: 1.3rem;
+    font-weight: 400;
+    background-color: rgba(209, 162, 123, 0.2);
+    padding: .5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.active {
+    background-color: #d1a17b;
+    color: #fff;
+}
+
+.music-list:hover,
+.music-list:active {
+    background-color: #d1a17b;
+    color: #fff;
+}
+
+.music-list span {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 1.3rem;
+    background-color: #d1a17b;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    margin-right: 1rem;
+}
+
+.music-list.active span {
+    background-color: #fff;
+    color: #d1a17b;
+}
+
+/* ==========================
+Music Section End
+============================= */
+
+/* ==========================
+Coomming Section
+============================= */
+.comming-section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 8rem 0;
+    z-index: 1;
+    background-color: rgba(209, 162, 123, 0.05);
+}
+/* ==========================
+Coomming Section End
+============================= */
+
+/* ==========================
+Footer Start
+============================= */
+.footer {
+    padding: 3rem 0;
+    background-color: #333;
+    text-align: center;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.footer-text strong {
+    color: #d1a17b;
+    font-style: italic;
+}
+
+/* ==========================
+Footer End
+============================= */
+
+/* ==========================
+Responsive (Tablet/Mobile)
+============================= */
+
+@media screen and (max-width: 53.12em) {
+    .gird {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .gird-1-2-col {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .music-section,
+    .about-section,
+    .comming-section {
+        padding: 5rem 0;
+    }
+    .secondary-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 31.25em) {
+    html {
+        font-size: 41%;
+    }
+}
+
+

@@ -1,0 +1,136 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Gentium Book Plus', serif;
+    background-color: #000;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #fff;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+.header{
+    border-bottom: .1rem solid #fff;
+    padding: 3.2rem 0 .8rem 0;
+}
+.container{
+    max-width: 114rem;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+}
+.rbj-logo{
+    display: block;
+    max-width: 25rem;
+    margin: 0 auto;
+}
+.rbj-logo img{
+    width: 100%;
+}
+.navbar-item{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+    list-style: none;
+}
+.navbar-item li {
+    padding: 0;
+    margin: 0;
+}
+.navbar-item li a{
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+}
+
+.home-section{
+    padding: 1.6rem 0;
+}
+.home-items{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4.8rem;
+    align-items: center;
+    margin-bottom: 4.8rem;
+}
+.items-img{
+    width: 100%;
+}
+.home-items-left{
+    position: relative;
+    cursor: pointer;
+}
+.home-items-right{
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+}
+.items-des{
+    font-size: 2.4rem;
+    line-height: 1.5;
+    font-weight: 400;
+    word-spacing: .1rem;
+    color: #fff;
+}
+
+.items-heading{
+    font-family: 'Charm', cursive;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    max-width: 55rem;
+    margin: 0 auto;
+}
+
+
+@media only screen and (max-width: 62.19em) {
+    .home-items{
+        gap: 3.2rem;
+        margin-bottom: 3.2rem;
+    }
+    .items-des{
+        font-size: 2.2rem;
+        line-height: 1.6;
+        font-weight: 400;
+    }
+    
+    .items-heading{
+        font-size: 3.6rem;
+        line-height: 1.4;
+    }
+  }
+
+  @media only screen and (max-width: 47.94em) {
+    html {
+        font-size: 50.2%;
+        scroll-behavior: smooth;
+    }
+    .home-items{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4.8rem;
+        align-items: center;
+        margin-bottom: 4.8rem;
+    }
+    .items-heading{
+        max-width: 50rem;
+    }
+  }

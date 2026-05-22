@@ -1,0 +1,21 @@
+$(document).ready(function(){
+    $(".item-before").click(function(){
+      $(".popup-window-before").addClass("popup-window-active");
+      $("body").addClass("over-f-hide");
+    });
+    $(".popup-closs").click(function(){
+      $(".popup-window-before").removeClass("popup-window-active");
+      $("body").removeClass("over-f-hide");
+    });
+  });
+
+$(document).ready(function(){
+    $(".item-after").click(function(){
+      $(".popup-window-after").addClass("popup-window-active");
+      $("body").addClass("over-f-hide");
+    });
+    $(".popup-closs").click(function(){
+      $(".popup-window-after").removeClass("popup-window-active");
+      $("body").removeClass("over-f-hide");
+    });
+  });

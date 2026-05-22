@@ -1,0 +1,230 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.top-logo {
+    max-width: 550px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.top-logo img {
+    width: 100%;
+    height: auto;
+    padding: 35px;
+}
+
+.hero-section {
+    position: relative;
+    background-image: url(../img/bg-2.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.billborad {
+    position: absolute;
+    max-width: 300px;
+    height: auto;
+    bottom: 0px;
+    left: 50px;
+}
+
+.billboard-image {
+    width: 100%;
+    height: 400px;
+    z-index: -1;
+}
+
+.gif-image {
+    position: absolute;
+    width: 100%;
+    height: 330px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    transition: all .3s linear;
+    border-radius: 10px;
+}
+
+.landbot {
+    position: absolute;
+    width: 100%;
+    height: 330px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.d-none {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+.navbar {
+    position: absolute;
+    top: 57%;
+    left: 64%;
+    transform: translate(-50%, -50%);
+}
+
+.navbar-nav {
+    position: absolute;
+    background-image: url(../img/thumb_Hanging-sign-2.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 230px;
+    height: 200px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-nav li:first-child {
+    margin-top: 30px;
+}
+
+.nav-link {
+    cursor: pointer;
+    display: inline-block;
+    color: #d3e814;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.8;
+    outline: none;
+    text-decoration: none;
+    text-shadow: 0 3px 20px red, 0 0 20px red, 0 0 10px orange,
+        4px -5px 6px yellow, -4px -10px 10px yellow, 0 -10px 30px yellow;
+    animation: 2s Blazing infinite alternate linear;
+}
+
+@keyframes Blazing {
+    0% {
+        text-shadow: 0 3px 20px red, 0 0 20px red, 0 0 10px orange, 0 0 0 yellow,
+            0 0 5px yellow, -2px -5px 5px yellow, 4px -10px 10px yellow;
+    }
+
+    25% {
+        text-shadow: 0 3px 20px red, 0 0 30px red, 0 0 20px orange,
+            0 0 5px yellow, -2px -5px 5px yellow, 
+    }
+
+    /* 50% {
+        text-shadow: 0 3px 20px red, 0 0 20px red, 0 -5px 10px orange,
+            -2px -5px 5px yellow, 3px -10px 10px yellow, -4px -15px 20px yellow,
+            2px -20px 30px rgba(255, 255, 0, 0.5);
+    }
+
+    75% {
+        text-shadow: 0 3px 20px red, 0 0 20px red, 0 -5px 10px orange,
+            3px -5px 5px yellow, -4px -10px 10px yellow,
+            2px -20px 30px rgba(255, 255, 0, 0.5),
+            0px -25px 40px rgba(255, 255, 0, 0);
+    }
+
+    100% {
+        text-shadow: 0 3px 20px red, 0 0 20px red, 0 0 10px orange, 0 0 0 yellow,
+            0 0 5px yellow, -2px -5px 5px yellow, 4px -10px 10px yellow;
+    }
+} */
+
+@media screen and (width: 1024px) {
+    .navbar {
+        position: absolute;
+        top: 53%;
+        left: 53%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+@media screen and (max-width: 736px) {
+    .navbar {
+        position: absolute;
+        top: 54%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+    }
+
+    .navbar-nav {
+        width: 150px;
+        height: 150px;
+    }
+
+    .nav-link {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .billborad {
+        width: 250px;
+        height: 350px;
+        bottom: 0px;
+        left: 0px;
+    }
+
+    .billboard-image {
+        height: 100%;
+        z-index: -1;
+    }
+
+    .gif-image {
+        height: 290px;
+        top: 10px;
+        left: 50%;
+    }
+    .landbot {
+        width: 100%;
+        height: 290px;
+        top: 10px;
+    }
+}
+@media screen and (max-width: 360px) {
+    .navbar {
+        top: 54%;
+        left: 63%;
+    }
+
+    .navbar-nav {
+        width: 100px;
+        height: 120px;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    .billborad {
+        width: 200px;
+        height: 300px;
+    }
+    .landbot {
+        width: 100%;
+        height: 260px;
+    }
+}
